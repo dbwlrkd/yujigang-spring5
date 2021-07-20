@@ -53,12 +53,10 @@ $(document).ready(function() {
 	<!-- 메인본문영역 -->
 	<div class="bodytext_area box_inner">
 		<!-- 폼영역 -->
-		<form method="POST" name="join_form" action="/join" class="appForm">
+		<form method="POST" name="join_form" action="join" class="appForm">
 			<fieldset>
 				<legend>회원가입폼</legend>
-				<p class="info_pilsoo pilsoo_item">
-				필수입력(회원가입 후 관리자가 승인해 줘야만, 로그인이 가능합니다!)
-				</p>
+				<p class="info_pilsoo pilsoo_item">필수입력</p>
 				<ul class="app_list">
 					<li class="clear">
 						<label for="user_id_lbl" class="tit_lbl pilsoo_item">사용자ID</label>
@@ -83,12 +81,12 @@ $(document).ready(function() {
 						<div class="app_content"><input type="email" name="email" class="w100p" id="email_lbl" placeholder="이메일을 입력해주세요" required/></div>
 					</li>
 					<li class="clear">
-						<label for="point_lbl" class="tit_lbl pilsoo_item">포인트</label>
+						<label for="pointl_lbl" class="tit_lbl pilsoo_item">포인트</label>
 						<div class="app_content"><input value="0" readonly type="digits" name="point" class="w100p" id="point_lbl" placeholder="포인트를 입력해주세요" required/></div>
 					</li>
 					<li class="clear">
 						<label for="gender_lbl" class="tit_lbl pilsoo_item">로그인여부</label>
-						<div class="app_content">
+						<div class="app_content radio_area">
 							<input checked value="0" type="radio" name="enabled" class="css-radio" id="enabled_lbl" />
 							<label for="enabled_lbl">금지</label>
 						</div>
@@ -109,7 +107,7 @@ $(document).ready(function() {
 					</li>
 				</ul>
 				<p class="btn_line">
-				<button type="submit" class="btn_baseColor" id="btn_insert" disabled style="opacity:0.5;">회원가입</button>
+				<button type="submit" class="btn_baseColor" id="btn_insert" disabled style="opacity:0.5">회원가입</button>
 				</p>	
 			</fieldset>
 			
@@ -130,24 +128,25 @@ $(document).ready(function(){
 				url:"/id_check_2010?user_id="+$(this).val(),
 				dataType:"json",//전송받는 데이터형
 				success:function(result) {
-					//alert(result.memberCnt);//JSON.stringify(result)
-					if(result.memberCnt == 0) {//중복ID가 존재하지 않으면
+					//alert(result.memberCnt); //JSON.stringify(result)
+					if(result.memberCnt == 0) { //중복아이디가 없으면
 						$("#btn_insert").attr("disabled",false);
-						$("#btn_insert").css("opacity","1");
+						$("#btn_insert").css("opacoty","1");
 						$("#msg").remove();
-						$("#user_id_lbl").after("<div id='msg' style='color:blue'>사용가능한 ID입니다</div>");
-					}else{//중복아이디가 존재할때 아래 실행
-						$("#btn_insert").attr("disabled",true);
-						$("#btn_insert").css("opacity","0.5");
-						$("#msg").remove();
-						$("#user_id_lbl").after("<div id='msg' style='color:red'>중복ID가 존재합니다.</div>");
+						$("#user_id_lbl").after("<div id='msg' style='color:blue'>사용가능ID입니다</div>");
+					}else { //중복아이디가 있으면 실행
+					$("#btn_insert").attr("disabled",true);
+					$("#btn_insert").css("opacoty","0.5");
+					$("#msg").remove();
+					$("#user_id_lbl").after("<div id='msg' style='color:red'>중복ID가 존재합니다.</div>");
 					}
 				},
 				error:function() {
-					alert("RestAPI서버가 작동하지 않습니다. 다음에 이용해 주세요.");
+					alert("RestAPI서버가작동하지 않습니다. 다음에 이용해주세요");
 				}
 			});
-			
+			$("#btn_insert").attr("disabled",false);
+			$("#btn_insert").css("opacity","1");
 		}
 	});
 });

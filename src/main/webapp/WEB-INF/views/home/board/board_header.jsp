@@ -59,6 +59,7 @@
 	padding: 20px 10px;
 }
 </style>
+</style>
 <!-- 메인상단위치표시영역 -->
 <div class="location_area customer">
 	<div class="box_inner">

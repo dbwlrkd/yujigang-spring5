@@ -47,7 +47,7 @@
               </div>
               <div class="form-group">
                 <label for="board_sun">출력순서</label>
-                <input value="${boardTypeVO.board_sun}" name="board_sun" type="text" class="form-control" id="board_sun" placeholder="출력순서를 입력해 주세요" required>
+                <input value="${boardTypeVO.board_sun}" name="board_sun" type="number" class="form-control" id="board_sun" placeholder="출력순서를 입력해 주세요" required>
               </div>
               
             </div>
@@ -77,5 +77,5 @@ $(document).ready(function(){
 			form_write.submit();
 		}
 	});
-});
+})
 </script>

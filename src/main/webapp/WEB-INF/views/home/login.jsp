@@ -40,7 +40,6 @@ if("${param.msg}" == "fail") {
                         <label for="password_lbl" class="tit_lbl pilsoo_item">암호</label>
                         <div class="app_content"><input type="password" name="user_pw" class="w100p" id="password_lbl" placeholder="암호를 입력해주세요" required/></div>
                     </li>
-
                 </ul>
                 <p class="btn_line">
                 <button type="submit" class="btn_baseColor">로그인</button>
@@ -53,7 +52,6 @@ if("${param.msg}" == "fail") {
     <!-- //메인본문영역 -->
 </div>
 <!-- //메인콘텐츠영역 -->
-
 <%@ include file="./include/footer.jsp" %>
 <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.2.js" charset="utf-8"></script>
 <script>

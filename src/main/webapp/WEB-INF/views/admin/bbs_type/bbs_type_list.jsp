@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-  <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -29,7 +29,7 @@
         <div class="card">
           <div class="card-header">
             <h3 class="card-title">목록</h3>
-            
+
           </div>
           <!-- /.card-header -->
           <div class="card-body table-responsive p-0">
@@ -37,9 +37,9 @@
               <!-- 줄바꿈않할때 다음 클래스추가 text-nowrap  -->
               <thead>
                 <tr>
-                  <th class="text-center">BOARD_TYPE</th>
-                  <th class="text-center">게시판 이름</th>
-                  <th class="text-center">출력순서</th>
+                  <th class="text-ceter">BOARD_TYPE</th>
+                  <th class="text-ceter">게시판이름</th>
+                  <th class="text-ceter">출력순서</th>
                 </tr>
               </thead>
               <tbody>

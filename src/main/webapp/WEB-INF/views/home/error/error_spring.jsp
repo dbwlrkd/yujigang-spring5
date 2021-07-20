@@ -12,7 +12,7 @@
             <h2 class="tit_page">페이지 오류 <a href="${session_prevPage}" class="btn_baseColor">이전페이지</a></h2>
             <p class="location">고객센터 <span class="path">/</span> 에러페이지</p>
             <ul class="page_menu clear">
-                <li style="text-align:left">
+                <li style="text-align:left;color:red">
                 	${exception.getMessage()}
                 </li>
             </ul>

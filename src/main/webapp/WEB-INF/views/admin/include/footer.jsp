@@ -56,7 +56,7 @@ color:#000;
 <script>
 //로그아웃 버튼 액션
 $("#btn_logout").click(function(){
-	location.replace('/logout');//security-context에 있는 /logout호출
+	location.replace('/logout'); //security-context에있는 logout호출
 });
 //왼쪽메뉴선택시 active 부트스트랩 클래스를 동적으로 추가하는 코드(아래)
 $(document).ready(function(){
@@ -77,4 +77,4 @@ $(document).ready(function(){
 		}
 	});
 });
-</script>   
+</script>

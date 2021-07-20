@@ -33,7 +33,6 @@ $(document).ready(function() {
 		$(this).parent().hide();// a태그의 부모 rollplay영역 입니다.
 		$('.rollstop').css('display','inline-block');
 		play_w('right');//3초마다 슬라이드 이미지 액션일 발생합니다.
-
 	});
 	$('.rollingbtn li.seq a').each(function(index){
 		$(this).click(function(){
@@ -106,7 +105,7 @@ $(document).ready(function() {
 						<div class="latest_img">
 						<c:choose>
 							<c:when test="${empty galleryVO.save_file_names[0]}">
-								<img class="img_topplace" src="/resources/home/img/no_image.png" alt="OOOO OOOOO"/>
+								<img class="img_topplace" src="/resources/home/img/no_image.jpg" alt="OOOO OOOOO"/>
 							</c:when>
 							<c:otherwise>
 								<img class="img_topplace" src="/image_preview?save_file_name=${galleryVO.save_file_names[0]}" alt="OOOO OOOOO"/>

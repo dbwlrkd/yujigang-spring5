@@ -34,7 +34,6 @@ $(document).ready(function() {
 		$(this).parent().hide();// a태그의 부모 rollplay영역 입니다.
 		$('.rollstop').css('display','inline-block');
 		play_w('right');//3초마다 슬라이드 이미지 액션일 발생합니다.
-
 	});
 	$('.rollingbtn li.seq a').each(function(index){
 		$(this).click(function(){
@@ -168,4 +167,3 @@ $(document).ready(function() {
 		<!-- //카카오톡상담및최근공지사항영역 -->
 	</div>
 	<!-- //메인콘텐츠영역 -->
-	
